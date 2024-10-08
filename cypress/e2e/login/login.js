@@ -3,27 +3,27 @@ import { Given, When, Then, And } from 'cypress-cucumber-preprocessor/steps';
 
 Given('I open the website', () => {
 
-  cy.visit('https://www.saucedemo.com/'); 
+  cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'); 
 
 });
 
 When('I enter my username {string} and password {string}', (username, password) => {
 
-  cy.get('#user-name').type(username);
+  cy.get('.oxd-input').eq(0).type(username);
 
-  cy.get('input[name="password"]').type(password);
+  cy.get('.oxd-input').eq(1).type(password);
 
 });
 
 And('I click the login button', () => {
 
-  cy.get('#login-button').click();
+  cy.get('.oxd-button').click();
 
 });
 
 Then('I should be logged in', () => {
 
-  cy.url().should('eq', 'https://www.saucedemo.com/inventory.html'); 
+  cy.url().should('eq', 'https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index'); 
 
 
 });

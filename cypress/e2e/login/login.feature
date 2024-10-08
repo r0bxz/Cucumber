@@ -4,7 +4,7 @@ Feature: Login to a website
 
     Given I open the website
 
-    When I enter my username "standard_user" and password "secret_sauce"
+    When I enter my username "Admin" and password "admin123"
 
     And I click the login button
 
