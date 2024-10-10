@@ -22,7 +22,7 @@
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinations": true,
-    "stepDefinitions": "cypress/e2e/login/"
+    "stepDefinitions": "cypress/e2e/features/"
   }
 
 }
