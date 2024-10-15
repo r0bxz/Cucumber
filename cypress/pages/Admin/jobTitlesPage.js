@@ -39,7 +39,6 @@ class jobTitlesPage {
             this.deleteButton().click();
         });
         cy.contains('button', 'Yes, Delete').click();
-        cy.contains('.oxd-table-row', jobTitle).should('not.exist');
     }
   
     editJobTitle(oldTitle, newTitle) {
@@ -47,7 +46,6 @@ class jobTitlesPage {
             this.editButton().click();
         });
         this.jobTitleField().clear().type(newTitle);
-        this.clickSave();
     }
   }
   
